@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>foodie-cloud-pojo</artifactId>
+    <artifactId>foodie-cloud-shared-pojo</artifactId>
 
 
     <dependencies>
