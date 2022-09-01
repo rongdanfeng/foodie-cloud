@@ -57,7 +57,7 @@ public interface MyOrdersService {
      * @return
      */
     @DeleteMapping("order")
-    void updateDeleteOrder(@RequestParam("orderId") String orderId);
+    boolean updateDeleteOrder(@RequestParam("userId") String userId ,@RequestParam("orderId") String orderId);
 
     /**
      * 查询用户订单数
