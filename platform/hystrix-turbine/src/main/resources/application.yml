@@ -1,0 +1,28 @@
+# Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:20000/eureka
+
+spring:
+  application:
+    name: hystrix-turbine
+server:
+  port: 21000
+management:
+  server:
+    port: 52000
+# turbine配置
+turbine:
+  aggregator:
+    # 集群配置，因为我们单节点所以默认default
+    cluster-config: default
+  # app-config: foodie-user-service,foodie-order-service,foodie-item-service
+  # 先使用order
+  app-config: foodie-order-service
+  # 集群名称
+  cluster-name-expression: "default"
+  combine-host-port: true
+  #从哪个actuator的端点拉取方法调用信息
+  instanceUrlSuffix:
+    default: actuator/hystrix.stream
